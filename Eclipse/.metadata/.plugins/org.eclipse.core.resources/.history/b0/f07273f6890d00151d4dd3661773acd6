@@ -1,0 +1,16 @@
+package com.amit.utils;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BST b = new BST();
+		int [] values = {7,5,3,4,21,9,25};
+		for(int temp:values)
+			b.add(temp);
+	}
+
+}

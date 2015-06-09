@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.amit.utils;
+
+/**
+ *
+ * @author Amit
+ */
+public class BST {
+	
+	public BST()
+	{
+		data = 0xFFFF;
+		left = null;
+		right = null;
+		nodeCount = 0;		
+	}
+	
+	public void add(int i_node_data)
+	{
+		if(nodeCount ==0)
+		{
+			data = i_node_data;
+		}
+		else
+		{
+			bool inserted = false;
+			BST traverseToNode;
+			BST insertingNode = new BST();
+			
+			while(!inserted)
+			{
+				if(data.)
+					traverseToNode = left;
+			}
+		}
+	}
+	
+	
+	
+	private int data;
+	private BST left;
+	private BST right;
+	private int nodeCount;
+	
+    
+}

@@ -1,0 +1,18 @@
+package com.amit.utils;
+
+public class MemoryManagerSingleton <T>{
+	
+	public static T getSingleton()
+	{
+		if(mObject == null)
+			return ((T) new Singleton());
+		else return mObject;
+	}
+	
+	private Singleton()
+	{
+		mObject = (T) new Object();
+	}
+	
+	private static BST mObject;
+}

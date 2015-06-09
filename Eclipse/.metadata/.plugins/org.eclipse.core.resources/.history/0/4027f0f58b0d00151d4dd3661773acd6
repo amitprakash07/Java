@@ -1,0 +1,27 @@
+package com.amit.utils;
+
+public class Stack <T> {
+	
+	public Stack()
+	{
+		array = (T[]) new Object[20];
+		stackPointerIndex = -1;
+	}
+	
+	public void push(T i_data)
+	{
+		array[++stackPointerIndex] = i_data;
+	}
+	
+	public T pop()
+	{
+		if(stackPointerIndex > -1)
+			return ((T) array[stackPointerIndex--]);
+		else return null;			
+	}
+	
+	private T [] array;
+	private int  stackPointerIndex;
+}
+
+

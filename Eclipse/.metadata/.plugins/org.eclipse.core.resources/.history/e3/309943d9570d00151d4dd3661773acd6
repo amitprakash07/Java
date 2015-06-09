@@ -1,0 +1,14 @@
+package com.amit.utils;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BST b = new BST();
+		for(int i = 200; i >0 ; i = i-10)
+		{
+			b.add(i);
+		}
+	}
+
+}

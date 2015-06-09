@@ -1,0 +1,18 @@
+package com.amit.utils;
+
+public class Singleton <T>{
+	
+	public T getSingleton()
+	{
+		if(mObject == null)
+			return ((T) new Singleton());
+		else return mObject;
+	}
+	
+	private Singleton()
+	{
+		mObject = (T) new Object();
+	}
+	
+	private T mObject;
+}

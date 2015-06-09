@@ -1,0 +1,33 @@
+package com.amit.utils;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BST b = new BST();
+		int [] values = {7,5,3,4,21,9,25};
+		
+		for(int temp:values)
+			b.add(temp);
+		
+		BST c = new BST();
+		int [] newvalues = {7,5,3,4,21,9,25};
+		
+		for(int temp:newvalues)
+			c.add(temp);
+		
+		Stack<BST> s= new Stack<BST>();
+		
+		s.push(b);
+		s.push(c);
+		
+		s.reserve(50);
+		
+		s.pop();
+		s.pop();
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.amit.utils;
+
+public class Stack <T> {
+	
+	public Stack()
+	{
+		array = (T[]) new Object[20];
+	}
+	
+	private T [] array;
+	private int  stackPointerIndex;
+}

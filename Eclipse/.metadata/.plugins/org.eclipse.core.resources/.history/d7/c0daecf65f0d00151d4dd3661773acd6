@@ -1,0 +1,104 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.amit.utils;
+
+/**
+ *
+ * @author Amit
+ */
+public class BST {
+	
+	public BST()
+	{
+		data = 0xFFFF;
+		left = null;
+		right = null;
+			
+	}
+	
+	public void add(int i_node_data)
+	{
+		if(nodeCount ==0)
+		{
+			data = i_node_data;
+			nodeCount++;
+		}
+		else
+		{
+			//boolean inserted = false;
+			BST traverseToNode = this;
+			BST insertingNode = new BST();
+			insertingNode.data = i_node_data;
+			//child childOrder = child.nothing;
+			BST previous = this;
+			
+			while(traverseToNode != null)
+			{
+				previous = traverseToNode;
+				if(i_node_data < traverseToNode.data)
+					traverseToNode = traverseToNode.left;
+				else
+					traverseToNode = traverseToNode.right;
+			}
+			
+			if(i_node_data < previous.data)
+				previous.left = insertingNode;
+			else
+				previous.right = insertingNode;
+			
+			/*do
+			{
+				if(i_node_data < traverseToNode.data)
+				{
+					childOrder = child.left;
+					if(traverseToNode.left == null)
+						break;
+					traverseToNode = traverseToNode.left;
+					
+					
+				}
+					
+				else
+				{
+					childOrder = child.right;
+					if(traverseToNode.right == null)
+						break;
+					traverseToNode = traverseToNode.right;
+					
+					
+				}
+					
+			}while(traverseToNode.left!=null || traverseToNode.right!= null);
+			
+			switch(childOrder)
+			{
+			case left:
+				traverseToNode.left = insertingNode;
+				break;
+			case right:
+				traverseToNode.right = insertingNode;
+				break;
+			}*/
+			
+		}
+	}	
+	
+	
+	private int data;
+	private BST left;
+	private BST right;
+	private static int nodeCount = 0;
+	
+	enum child
+	{
+		left,
+		right,
+		nothing
+	};
+
+
+}
+
